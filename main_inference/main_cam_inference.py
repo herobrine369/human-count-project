@@ -164,7 +164,7 @@ def main():
 
         # recognition
         # and then count the people
-        # TODO store the data
+        # store the data
 
         # convert bgr to rgb and feed it into model
         img_rgb = cv2.cvtColor(raw_img, cv2.COLOR_BGR2RGB)

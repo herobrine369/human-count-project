@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import axios from "axios";
 
-// TODO: RENAME "persons_recogn_IOT" -> "unnamed_detect_iot"
 // TODO: finish the counts of persons list
 // TODO: template below:
 {/*<ul className="list-group">*/}
@@ -11,7 +11,9 @@ import React, {useEffect, useState} from 'react';
 const Dashboard = () => {
     const [body, setBody] = useState(<></>)
     useEffect(()=>{
-
+        axios.get("persons-count/").then((res)=>{
+            // res.data.map()
+        })
     })
 
     return (

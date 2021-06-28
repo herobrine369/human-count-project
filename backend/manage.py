@@ -3,10 +3,12 @@
 import os
 import sys
 
+from unnamed_detect_iot.REFERENCE import project_name
+
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'persons_recogn_IOT.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'{project_name}.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

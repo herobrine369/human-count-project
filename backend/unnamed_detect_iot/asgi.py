@@ -1,5 +1,5 @@
 """
-ASGI config for persons_recogn_IOT_ project.
+ASGI config for unnamed_detect_iot_ project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,8 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'persons_recogn_IOT.settings')
+from .REFERENCE import project_name
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f'{project_name}.settings')
 
 application = get_asgi_application()

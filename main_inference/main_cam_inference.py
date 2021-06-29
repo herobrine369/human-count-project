@@ -42,6 +42,7 @@ COCO_INSTANCE_CATEGORY_NAMES = [
 
 
 def upload_count():
+    # TODO: MAKE IT FASTER
     try:
         curr_count = persons_count_
         requests.post('http://localhost:8103/persons-count/', data={'count': str(curr_count)})

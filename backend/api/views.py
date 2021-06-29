@@ -8,6 +8,6 @@ from .serializers import PersonsCountSerializer
 
 
 class PersonsCountSet(viewsets.ModelViewSet):
-    queryset = PersonsCount.objects.all().order_by('time')
+    queryset = PersonsCount.objects.all().order_by('-time')
     serializer_class = PersonsCountSerializer
     # permission_classes = [permissions.IsAuthenticated]

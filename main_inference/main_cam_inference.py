@@ -18,6 +18,7 @@ import torchvision
 import torch
 import numpy as np
 import cv2
+import datetime
 
 import threading
 
@@ -45,7 +46,9 @@ def upload_count():
     # TODO: MAKE IT FASTER
     try:
         curr_count = persons_count_
-        requests.post('http://localhost:8103/persons-count/', data={'count': str(curr_count)})
+        requests.post('http://localhost:8103/persons-count/', data={'count': str(curr_count),
+                                                                    'date': datetime.datetime.now()
+                      .strftime("%Y-%m-%d %H:%M:%S")})
         print(f"uploaded count {curr_count}")
     except Exception:
         pass

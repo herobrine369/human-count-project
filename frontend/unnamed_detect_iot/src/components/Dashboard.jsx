@@ -15,7 +15,7 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        update(pageNum)
+        update()
     })
 
     return (
